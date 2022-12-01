@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <InputNumberRange
+        v-model="value"
+    ></InputNumberRange>
+    <h2>value:{{this.value}}</h2>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import InputNumberRange from 'input-number-range'
+// import InputNumberRange from '../../lib/input-number-range/lib/InputNumberRange';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    InputNumberRange
+  },
+  data(){
+    return{
+      value:[]
+    }
+  },
+  methods:{
+
   }
 }
 </script>
@@ -19,10 +29,4 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  -webkit-font-smoothing
